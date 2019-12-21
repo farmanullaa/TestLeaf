@@ -1,4 +1,4 @@
-package day1.classroom;
+package day1;
 
 public class SumOfDigits {
 
@@ -18,17 +18,29 @@ public class SumOfDigits {
 	 * 3) 
 	 * 
 	 */
-
-	public static void main(String[] args) {
-
-		// Declare your input number (int)
-
-		// Initialize an integer variable by name: sum
-
-		// Use loop to calculate the sum: which loop to use until the number goes less than 10??
-
-		// Within loop: get the remainder when done by 10 -> Tip: use mod
-
+	// Declare your input number (int)	
+	   static int getSum(int n) 
+	    {     
+			// Initialize an integer variable by name: sum	
+		   int sum = 0; 
+		// Use loop to calculate the sum: which loop to use until the number goes less than 10??	          
+	        while (n != 0) 
+	        { 
+	        	// Within loop: get the remainder when done by 10 -> Tip: use mod
+	        	sum = sum + n % 10; 
+	            n = n/10; 
+	        } 
+	      
+	    return sum; 
+	    } 
+	  
+	    // Driver program 
+	    public static void main(String[] args) 
+	    { 
+	        int input = 123; 
+	  
+	        System.out.println(getSum(input)); 
+	    } 	
 			// Print the remainder to confirm
 	
 			// Within loop: add that remainder to the sum
@@ -40,6 +52,7 @@ public class SumOfDigits {
 			// Print the quotient to confirm
 		
 		// Outside the loop: print the final sum
-	}
+	
+	
 
 }
